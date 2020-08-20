@@ -1,0 +1,241 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  /* background: url(showcase.jpg) no-repeat center center / cover; */
+  box-sizing: border-box;
+  min-height: 100vh;
+  background: teal; /*WEBSITE*/
+  color: white; /* WEBSITE*/
+}
+body .nav-bar #grad {
+  background: #06beb6;
+  opacity: 0.9;
+  z-index: 5;
+}
+
+.nav-bar {
+  text-align: center;
+  z-index: 1;
+}
+.nav-bar ul {
+  display: inline-flex;
+  list-style: none;
+  padding: 10px;
+}
+.nav-bar ul li {
+  padding: 15px 30px;
+  margin: 4px;
+}
+
+.nav-bar ul li > a {
+  color: rgb(240, 224, 1);
+  font-size: 1rem;
+  font-weight: bold;
+  z-index: 5;
+  text-decoration: none;
+}
+
+.active-btn,
+.nav-bar ul li:hover {
+  background: teal;
+  /* border-radius: 1rem; */
+}
+
+.nav-bar i {
+  margin-right: 8px;
+  background: rgb(12, 87, 79);
+  border-radius: 50%;
+  padding: 8px;
+  display: inline;
+}
+
+.sub {
+  display: none;
+}
+
+.nav-bar ul li:hover .sub {
+  display: block;
+  position: absolute;
+  background: #06beb6;
+  margin-top: 15px;
+  margin-left: -15px;
+}
+
+/* display block list elements in ul */
+.nav-bar ul li:hover .sub ul {
+  display: block;
+  margin: 10px;
+}
+
+/* setting of nav */
+.nav-bar ul li:hover .sub ul li {
+  width: 200px;
+  padding: 10px;
+  border-bottom: 1px solid teal;
+  text-align: left;
+  background: transparent;
+  border-radius: 0;
+}
+
+/* remove last line from first nav */
+.nav-bar ul li:hover .sub ul li:last-child {
+  border-bottom: none;
+}
+
+.nav-bar ul li:hover .sub ul li a:hover {
+  color: teal;
+  font-weight: bold;
+}
+
+.fa-angle-right {
+  float: right;
+  color: rgb(240, 224, 1);
+  background: transparent !important;
+}
+
+.sub2 {
+  display: none;
+  cursor: pointer;
+  color: rgb(240, 224, 1);
+  font-size: 1rem;
+  font-weight: bold;
+  z-index: 5;
+}
+
+li .hover:hover .sub2 {
+  display: block;
+  position: absolute;
+  position: absolute;
+  margin-top: -40px;
+  margin-left: 140px;
+  background-color: #06beb6;
+}
+.sub2 ul li:hover {
+  color: teal;
+  font-weight: bolder;
+}
+/* ******************************************************* */
+/* styling the website */
+
+.showcase::after {
+  content: "";
+  height: 70vh;
+  width: 100%;
+  display: block;
+  background: url(showcase.jpg) no-repeat center center/cover;
+}
+
+.showcase {
+  background: rgba(17, 20, 19, 0.6);
+}
+
+.content {
+  position: absolute;
+  z-index: 10000;
+  top: 10%;
+  left: 50%;
+  margin-top: 300px;
+  margin-left: -200px;
+  height: 350px;
+  width: 500px;
+  text-align: center;
+  transition: all 500ms;
+}
+
+.content .logo {
+  letter-spacing: 6px;
+  background-color: teal;
+  opacity: 0.7;
+}
+
+.content .title {
+  font-size: 2rem;
+  margin-top: 1rem;
+  margin-left: -30px;
+  height: -100px;
+  width: 500px;
+}
+
+.container {
+  max-width: 960px;
+  margin: auto;
+  overflow: hidden;
+  padding: 4rem 1em;
+}
+.grid-3 {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.grid-2 {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.center {
+  text-align: center;
+  margin: auto;
+}
+
+.bg-light {
+  background: #f4f4f4;
+  color: #333;
+}
+.bg-dark {
+  background: #333;
+  color: #f4f4f4;
+}
+
+.line {
+  border: solid 1px teal;
+}
+
+footer {
+  padding: 2.2rem;
+}
+
+footer p {
+  margin: 0;
+}
+
+/* small screens */
+@media only screen and (max-width: 600px) {
+  .showcase::after {
+    height: 50vh;
+    box-sizing: none;
+  }
+  .nav-bar ul {
+    display: block;
+    text-align: left;
+  }
+  .nav-bar ul li {
+    display: block;
+    text-align: left;
+  }
+
+  .content {
+    top: 10%;
+    left: 50%;
+    margin-top: 350px;
+    margin-left: -200px;
+  }
+
+  .content .title {
+    font-size: 1rem;
+    margin-top: -5rem;
+    margin-left: -200px;
+    margin-bottom: -60px;
+    height: -10px;
+    width: 200px;
+    writing-mode: vertical-rl;
+    font-weight: bolder;
+    color: teal;
+    letter-spacing: 4px;
+    background: seashell;
+  }
+}
